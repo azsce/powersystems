@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const isProd = process.env.NODE_ENV === "production";
-const baseUrl = isProd ? "/PowerSystems/" : "/";
+const baseUrl = isProd ? "/powersystems/" : "/";
 
 const config: Config = {
   title: "أنظمة القوى الكهربائية",
