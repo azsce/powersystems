@@ -1,0 +1,151 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Quiz Styles */
+.quiz-question {
+  background: var(--ifm-color-primary-lightest);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--ifm-color-primary);
+}
+
+.quiz-question-header {
+  font-size: 1.2rem;
+  color: var(--ifm-color-primary-darkest);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quiz-question-header::before {
+  content: "📝";
+  font-size: 1.4rem;
+}
+
+.quiz-answer {
+  background: var(--ifm-background-color);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--ifm-color-primary-lighter);
+}
+
+.quiz-answer-title {
+  font-weight: bold;
+  color: var(--ifm-color-primary-darker);
+  margin-bottom: 0.5rem;
+}
+
+.quiz-point {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.quiz-point::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.quiz-reference {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary-darker);
+  font-style: italic;
+}
+
+/* Tables within quiz */
+.quiz-question table {
+  margin: 1rem 0;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .quiz-question {
+  background: var(--ifm-color-primary-darkest);
+}
+
+[data-theme="dark"] .quiz-answer {
+  border-color: var(--ifm-color-primary-darker);
+}
+
+.quiz-title {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+[data-theme="dark"] .quiz-title {
+  color: var(--ifm-color-primary-lighter);
+}
+
+code:not([class]) {
+  background-color: rgb(62, 63, 3) !important;
+  color: rgb(192, 196, 193) !important;
+  border: 1px solid rgb(225, 221, 183) !important;
+}
+
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* Mermaid diagram container styling */
+.docusaurus-mermaid-container {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+/* Center tables */
+table {
+  display: table;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+th, td {
+  text-align: center !important;
+}
+
+/* Make tables scrollable on small screens */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
